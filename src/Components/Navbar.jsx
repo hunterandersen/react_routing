@@ -3,17 +3,17 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <header>
+    <header className="App-header">
       <nav>
-        <ul>
-          <li>
-            <NavLink to="/home">Home</NavLink>
+        <ul className="flex gap-10">
+          <li className="nav-link">
+            <NavLink className={({ isActive }) => isActive? "link-active": "link-generic"} to="/home">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/films">Films</NavLink>
+          <li className="nav-link">
+            <NavLink className={({ isActive }) => isActive? "link-active": "link-generic"} to="/films">Films</NavLink>
           </li>
-          <li>
-            <NavLink to="/people">People</NavLink>
+          <li className="nav-link">
+            <NavLink className={({ isActive }) => isActive? "link-active": "link-generic"} to="/people">People</NavLink>
           </li>
         </ul>
       </nav>
