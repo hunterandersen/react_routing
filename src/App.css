@@ -24,6 +24,8 @@ code {
   align-items: center;
   justify-content: center;
   color: white;
+  position:sticky;
+  top:0px;
 }
 
 nav{
@@ -33,12 +35,41 @@ nav{
   font-size:1.5rem;
 }
 
+.margin-10{
+  margin-bottom: 10px;
+}
+
 .gap-10{
   gap:10px;
 }
 
 .flex{
   display: flex;
+}
+
+.card-link{
+  text-decoration: none;
+  color:inherit;
+}
+
+.hover-color:hover{
+  background-color: rgba(253, 120, 59, 0.3);
+}
+
+.home-title{
+  font-size: 4rem;
+  margin:10px;
+}
+
+.flex-center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column{
+  display:flex;
+  flex-direction: column;
 }
 
 .nav-link{
@@ -51,6 +82,11 @@ nav{
 
 .link-generic {
   color: #61dafb;
+}
+
+.li-poeple{
+  margin:5px;
+  list-style-type:"> ";
 }
 
 .film-primary-img{

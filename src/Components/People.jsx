@@ -2,6 +2,7 @@ import React from "react";
 import * as MyConstants from "../shared/MyConstants";
 import { useState, useEffect } from "react";
 import { APIService } from "../shared/API.service";
+import { Link } from "react-router-dom";
 
 function People() {
   const [people, setPeople] = useState([]);
@@ -22,7 +23,11 @@ function People() {
   return isLoading ? (
     <h1>Loading...</h1>
   ) : (
-    people.map((person) => <h2 key={person.id}>{person.name}</h2>)
+    people.map((person) => {
+      return <Link to={`${person.id}`} className="card-link margin-10" key={person.id}>
+        <p>{person.name}</p>
+      </Link>
+    })
   );
 }
 

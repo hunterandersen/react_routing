@@ -15,7 +15,6 @@ export default function Film() {
       params.filmId
     );
     if (film) {
-        console.log(film);
       setFilm(film);
     }
     setIsLoading(false);
@@ -29,7 +28,7 @@ export default function Film() {
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <div className="flex-center flex-column gap-10">
       <h1>{film.title}</h1>
       <p>{film.description}</p>
       <img src={`${film.movie_banner}`} alt={`Banner for ${film.title}`} className="film-banner-img"></img>
